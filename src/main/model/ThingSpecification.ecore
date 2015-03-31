@@ -3,13 +3,13 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="spec" nsURI="http://yetu.com/models/ThingSpecification" nsPrefix="">
   <eClassifiers xsi:type="ecore:EClass" name="ThingSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
-        eType="ecore:EClass ../../ThingModel/model/ThingAbstraction.ecore#//Capability"
+        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//Capability"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="componentTypes" upperBound="-1"
-        eType="ecore:EClass ../../ThingModel/model/ThingAbstraction.ecore#//ComponentType"
+        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//ComponentType"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
-        eType="ecore:EClass ../../ThingModel/model/ThingAbstraction.ecore#//Unit"
+        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//Unit"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

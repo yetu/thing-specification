@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ThingSpecification/src" modelPluginID="ThingSpecification"
     modelName="ThingSpecification" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
-    usedGenPackages="../../ThingModel/model/ThingAbstraction.genmodel#//model" operationReflection="true"
+    usedGenPackages="https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.genmodel#//model" operationReflection="true"
     importOrganizing="true">
   <foreignModel>ThingSpecification.ecore</foreignModel>
   <genPackages prefix="Spec" basePackage="com.yetu.abstraction" disposableProviderFactory="true"
