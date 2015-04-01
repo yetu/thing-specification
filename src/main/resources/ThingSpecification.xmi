@@ -5,81 +5,71 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="http://yetu.com/models/ThingSpecification"
     xsi:schemaLocation="http://yetu.com/models/ThingSpecification ../model/ThingSpecification.ecore">
- 
-    <capabilities
-        id="SWITCHABLE">
-      <properties
-          name="on"
-          writable="true"
-          unit="BOOLEAN"/>
-    </capabilities>
-    <capabilities
-        id="MEASUREMENT">
-      <properties
-          name="value"/>
-    </capabilities>
-    <capabilities
-        id="LOCKABLE">
-      <properties
-          name="locked"
-          writable="true"
-          unit="BOOLEAN"/>
-    </capabilities>
-    <capabilities
-        id="SETTABLE">
-      <properties
-          name="value"
-          writable="true"/>
-    </capabilities>
-    <capabilities
-        id="DETECTION">
-      <properties
-          name="detected"
-          unit="BOOLEAN"/>
-    </capabilities>
-    <capabilities
-        id="DIMMABLE">
-      <properties
-          name="dimmlevel"
-          writable="true"
-          unit="PERCENTAGE"/>
-    </capabilities>
- 
-    <componentTypes
-        capability="SWITCHABLE"
-        id="SOCKET"/>
-    <componentTypes
-        capability="SWITCHABLE"
-        id="LAMP"/>
-    <componentTypes
-        capability="SETTABLE"
-        id="THERMOSTAT"/>
-    <componentTypes
-        capability="MEASUREMENT"
-        id="SENSOR"/>
-    <componentTypes
-        capability="MEASUREMENT"
-        id="METER"/>
-    <componentTypes
-        capability="LOCKABLE"
-        id="LOCK"/>
-    <componentTypes
-        capability="DETECTION"
-        id="ALARM"/>
-    <componentTypes
-        capability="MEASUREMENT"
-        id="BATTERY"/>
- 
-    <units id="BOOLEAN"
-        symbol=""
-        valueType="BOOLEAN"/>
-    <units id="NUMBER"
-        valueType="NUMBER"/>
-    <units id="WATT"
-        symbol="W"
-        valueType="NUMBER"/>
-    <units id="PERCENTAGE"
-        symbol="%"
-        valueType="NUMBER"/>
- 
+  <capabilityTemplates
+      id="SWITCHABLE">
+    <properties
+        name="on"
+        unit="BOOLEAN"
+        writable="true"/>
+  </capabilityTemplates>
+  <capabilityTemplates
+      id="DIMMABLE">
+    <properties
+        name="dimmLevel"
+        unit="NUMBER"
+        writable="true"/>
+  </capabilityTemplates>
+  <capabilityTemplates
+      id="MEASUREMENT">
+    <properties
+        name="measurement"/>
+  </capabilityTemplates>
+  <capabilityTemplates
+      id="SETTABLE">
+    <properties
+        name=""
+        writable="true"/>
+  </capabilityTemplates>
+  <capabilityTemplates
+      id="LOCKABLE">
+    <properties
+        name="locked"
+        unit="BOOLEAN"
+        writable="true"/>
+  </capabilityTemplates>
+  <capabilityTemplates
+      id="DETECTION">
+    <properties
+        name="detected"
+        unit="BOOLEAN"/>
+  </capabilityTemplates>
+  <componentTypes
+      id="SOCKET"
+      capabilities="SWITCHABLE"/>
+  <componentTypes
+      id="LAMP"
+      capabilities="SWITCHABLE"/>
+  <componentTypes
+      id="THERMOSTAT"
+      capabilities="SETTABLE"/>
+  <componentTypes
+      id="ALARM"
+      capabilities="DETECTION"/>
+  <componentTypes
+      id="METER"
+      capabilities="MEASUREMENT"/>
+  <componentTypes
+      id="BATTERY"
+      capabilities="MEASUREMENT"/>
+  <units id="BOOLEAN"
+      symbol=""
+      valueType="BOOLEAN"/>
+  <units id="NUMBER"
+      valueType="NUMBER"/>
+  <units id="WATT"
+      symbol="W"
+      valueType="NUMBER"/>
+  <units id="PERCENTAGE"
+      symbol="%"
+      valueType="NUMBER"/>
 </ThingSpecification>

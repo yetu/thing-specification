@@ -2,8 +2,8 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="spec" nsURI="http://yetu.com/models/ThingSpecification" nsPrefix="">
   <eClassifiers xsi:type="ecore:EClass" name="ThingSpecification">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
-        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//Capability"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capabilityTemplates" upperBound="-1"
+        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//CapabilityTemplate"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="componentTypes" upperBound="-1"
         eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//ComponentType"
