@@ -3,73 +3,41 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://yetu.com/models/ThingSpecification"
-    xsi:schemaLocation="http://yetu.com/models/ThingSpecification ../model/ThingSpecification.ecore">
-  <capabilityTemplates
+    xmlns="http://yetu.com/spec/abstraction"
+    xsi:schemaLocation="http://yetu.com/spec/abstraction ../model/ThingSpecification.ecore">
+  <capabilities
       id="SWITCHABLE">
     <properties
         name="on"
-        unit="BOOLEAN"
-        writable="true"/>
-  </capabilityTemplates>
-  <capabilityTemplates
-      id="DIMMABLE">
-    <properties
-        name="dimmLevel"
-        unit="NUMBER"
-        writable="true"/>
-  </capabilityTemplates>
-  <capabilityTemplates
+        writable="true"
+        unit="BOOLEAN"/>
+  </capabilities>
+  <capabilities
       id="MEASUREMENT">
     <properties
-        name="measurement"/>
-  </capabilityTemplates>
-  <capabilityTemplates
-      id="SETTABLE">
-    <properties
-        name=""
-        writable="true"/>
-  </capabilityTemplates>
-  <capabilityTemplates
+        name="value"/>
+  </capabilities>
+  <capabilities
       id="LOCKABLE">
     <properties
         name="locked"
-        unit="BOOLEAN"
-        writable="true"/>
-  </capabilityTemplates>
-  <capabilityTemplates
-      id="DETECTION">
-    <properties
-        name="detected"
+        writable="true"
         unit="BOOLEAN"/>
-  </capabilityTemplates>
-  <componentTypes
-      id="SOCKET"
-      capabilities="SWITCHABLE"/>
-  <componentTypes
-      id="LAMP"
-      capabilities="SWITCHABLE"/>
-  <componentTypes
-      id="THERMOSTAT"
-      capabilities="SETTABLE"/>
-  <componentTypes
-      id="ALARM"
-      capabilities="DETECTION"/>
-  <componentTypes
-      id="METER"
-      capabilities="MEASUREMENT"/>
-  <componentTypes
-      id="BATTERY"
-      capabilities="MEASUREMENT"/>
-  <units id="BOOLEAN"
-      symbol=""
-      valueType="BOOLEAN"/>
-  <units id="NUMBER"
-      valueType="NUMBER"/>
+  </capabilities>
   <units id="WATT"
       symbol="W"
       valueType="NUMBER"/>
-  <units id="PERCENTAGE"
-      symbol="%"
-      valueType="NUMBER"/>
+  <units id="BOOLEAN"
+      symbol=""
+      valueType="BOOLEAN"/>
+  <components
+      type="SOCKET"
+      capabilities="SWITCHABLE"/>
+  <components
+      type="LAMP"
+      capabilities="SWITCHABLE"/>
+  <componentTypes
+      id="SOCKET"/>
+  <componentTypes
+      id="LAMP"/>
 </ThingSpecification>

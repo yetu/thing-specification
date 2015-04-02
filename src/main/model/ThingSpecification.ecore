@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="spec" nsURI="http://yetu.com/models/ThingSpecification" nsPrefix="">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="spec" nsURI="http://yetu.com/spec/abstraction" nsPrefix="">
   <eClassifiers xsi:type="ecore:EClass" name="ThingSpecification">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="capabilityTemplates" upperBound="-1"
-        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//CapabilityTemplate"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="componentTypes" upperBound="-1"
-        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//ComponentType"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
+        eType="#//CapabilitySpecification" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
         eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//Unit"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//ComponentSpecification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentTypes" upperBound="-1"
+        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//ComponentType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilitySpecification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//PropertySpecification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
+        eType="#//ActionSpecification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="events" upperBound="-1"
+        eType="#//EventSpecification" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertySpecification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="writable" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//Unit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionSpecification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//ActionParameterSpecification" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionParameterSpecification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//Unit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventSpecification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//ComponentType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
+        eType="#//CapabilitySpecification"/>
   </eClassifiers>
 </ecore:EPackage>
