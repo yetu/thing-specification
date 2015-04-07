@@ -1,3 +1,50 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ThingSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://yetu.com/spec/abstraction" xsi:schemaLocation="http://yetu.com/spec/abstraction ../model/ThingSpecification.ecore"/>
+<ThingSpecification
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://yetu.com/spec/abstraction"
+    xsi:schemaLocation="http://yetu.com/spec/abstraction ../model/ThingSpecification.ecore">
+  <capabilitySpecifications
+      id="SWITCHABLE">
+    <properties
+        name="on"
+        writable="true"
+        unit="BOOLEAN"/>
+  </capabilitySpecifications>
+  <capabilitySpecifications
+      id="COLORABLE">
+    <properties
+        name="color"
+        writable="true"
+        unit="HSBCOLOR"/>
+  </capabilitySpecifications>
+  <capabilitySpecifications
+      id="MEASUREMENT">
+    <properties
+        name="value"/>
+  </capabilitySpecifications>
+  <units id="BOOLEAN"
+      valueType="BOOLEAN"/>
+  <units id="HSBCOLOR"
+      symbol=""
+      valueType="STRING"/>
+  <units id="WATTHOUR"
+      symbol="Wh"
+      valueType="NUMBER"/>
+  <componentSpecifications
+      type="SOCKET"
+      capabilities="SWITCHABLE"/>
+  <componentSpecifications
+      type="LAMP"
+      capabilities="SWITCHABLE"/>
+  <componentSpecifications
+      type="METER"
+      capabilities="MEASUREMENT"/>
+  <componentTypes
+      id="METER"/>
+  <componentTypes
+      id="SOCKET"/>
+  <componentTypes
+      id="LAMP"/>
+</ThingSpecification>

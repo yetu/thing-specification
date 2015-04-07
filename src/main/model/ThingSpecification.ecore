@@ -32,13 +32,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="capabilitySpecifications"
         upperBound="-1" eType="#//CapabilitySpecification" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
-        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//Unit" containment="true"/>
+        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//Unit"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="componentSpecifications"
         upperBound="-1" eType="#//ComponentSpecification" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="componentTypes" upperBound="-1"
-        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//ComponentType" containment="true"/>
+        eType="ecore:EClass https://raw.githubusercontent.com/yetu/thing-abstraction-model/master/src/main/model/ThingAbstraction.ecore#//ComponentType"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CapabilitySpecification">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
