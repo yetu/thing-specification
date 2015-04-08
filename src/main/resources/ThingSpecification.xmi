@@ -4,7 +4,8 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="http://yetu.com/spec/abstraction"
-    xsi:schemaLocation="http://yetu.com/spec/abstraction ../model/ThingSpecification.ecore">
+    xsi:schemaLocation="http://yetu.com/spec/abstraction ../model/ThingSpecification.ecore"
+    version="0.1">
   <capabilitySpecifications
       id="SWITCHABLE">
     <properties
@@ -22,7 +23,7 @@
   <capabilitySpecifications
       id="MEASUREMENT">
     <properties
-        name="value"/>
+        name="measurement"/>
   </capabilitySpecifications>
   <units id="BOOLEAN"
       valueType="BOOLEAN"/>
