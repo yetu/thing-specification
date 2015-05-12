@@ -4,8 +4,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="http://yetu.com/spec/abstraction"
-    xsi:schemaLocation="http://yetu.com/spec/abstraction ../model/ThingSpecification.ecore"
-    version="0.1">
+    xsi:schemaLocation="http://yetu.com/spec/abstraction ../model/ThingSpecification.ecore">
   <capabilitySpecifications
       id="SWITCHABLE">
     <properties
@@ -33,6 +32,21 @@
   <units id="WATTHOUR"
       symbol="Wh"
       valueType="NUMBER"/>
+  <units id="WATT"
+      symbol="W"
+      valueType="NUMBER"/>
+  <units id="ILLUMINANCE"
+      symbol="lx"
+      valueType="NUMBER"/>
+  <units id="TEMPERATURE"
+      symbol="&#xb0;C"
+      valueType="NUMBER"/>
+  <units id="PERCENTAGE"
+      symbol="%"
+      valueType="NUMBER"/>
+  <units id="HUMIDITY"
+      symbol="%"
+      valueType="NUMBER"/>
   <componentSpecifications
       type="SOCKET"
       capabilities="SWITCHABLE"/>
@@ -42,10 +56,19 @@
   <componentSpecifications
       type="METER"
       capabilities="MEASUREMENT"/>
+  <componentSpecifications
+      type="SENSOR"
+      capabilities="MEASUREMENT"/>
+  <componentSpecifications
+      type="BATTERY"/>
   <componentTypes
       id="METER"/>
   <componentTypes
       id="SOCKET"/>
   <componentTypes
       id="LAMP"/>
+  <componentTypes
+      id="SENSOR"/>
+  <componentTypes
+      id="BATTERY"/>
 </ThingSpecification>
