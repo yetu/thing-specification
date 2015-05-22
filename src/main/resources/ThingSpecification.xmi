@@ -24,6 +24,12 @@
     <properties
         name="measurement"/>
   </capabilitySpecifications>
+  <capabilitySpecifications
+      id="SETABLE">
+    <properties
+        name="value"
+        writable="true"/>
+  </capabilitySpecifications>
   <units id="BOOLEAN"
       valueType="BOOLEAN"/>
   <units id="HSBCOLOR"
@@ -61,6 +67,9 @@
       capabilities="MEASUREMENT"/>
   <componentSpecifications
       type="BATTERY"/>
+  <componentSpecifications
+      type="THERMOSTAT"
+      capabilities="SETABLE"/>
   <componentTypes
       id="METER"/>
   <componentTypes
@@ -71,4 +80,6 @@
       id="SENSOR"/>
   <componentTypes
       id="BATTERY"/>
+  <componentTypes
+      id="THERMOSTAT"/>
 </ThingSpecification>
