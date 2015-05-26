@@ -53,6 +53,9 @@
   <units id="HUMIDITY"
       symbol="%"
       valueType="NUMBER"/>
+  <units id="STRING"
+      symbol=""
+      valueType="STRING"/>
   <componentSpecifications
       type="SOCKET"
       capabilities="SWITCHABLE"/>
@@ -70,6 +73,9 @@
   <componentSpecifications
       type="THERMOSTAT"
       capabilities="SETABLE"/>
+  <componentSpecifications
+      type="WEBSERVICE"
+      capabilities="SETABLE"/>
   <componentTypes
       id="METER"/>
   <componentTypes
@@ -82,4 +88,6 @@
       id="BATTERY"/>
   <componentTypes
       id="THERMOSTAT"/>
+  <componentTypes
+      id="WEBSERVICE"/>
 </ThingSpecification>
