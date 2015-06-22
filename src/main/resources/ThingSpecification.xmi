@@ -25,7 +25,7 @@
         name="measurement"/>
   </capabilitySpecifications>
   <capabilitySpecifications
-      id="SETABLE">
+      id="SETTABLE">
     <properties
         name="value"
         writable="true"/>
@@ -72,10 +72,10 @@
       type="BATTERY"/>
   <componentSpecifications
       type="THERMOSTAT"
-      capabilities="SETABLE"/>
+      capabilities="SETTABLE"/>
   <componentSpecifications
       type="WEBSERVICE"
-      capabilities="SETABLE"/>
+      capabilities="SETTABLE"/>
   <componentTypes
       id="METER"/>
   <componentTypes
