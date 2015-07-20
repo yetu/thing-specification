@@ -30,6 +30,13 @@
         name="value"
         writable="true"/>
   </capabilitySpecifications>
+  <capabilitySpecifications
+      id="LOCKABLE">
+    <properties
+        name="locked"
+        writable="true"
+        unit="BOOLEAN"/>
+  </capabilitySpecifications>
   <units id="BOOLEAN"
       valueType="BOOLEAN"/>
   <units id="HSBCOLOR"
@@ -76,6 +83,9 @@
   <componentSpecifications
       type="WEBSERVICE"
       capabilities="SETTABLE"/>
+  <componentSpecifications
+      type="LOCK"
+      capabilities="LOCKABLE"/>
   <componentTypes
       id="METER"/>
   <componentTypes
@@ -90,4 +100,6 @@
       id="THERMOSTAT"/>
   <componentTypes
       id="WEBSERVICE"/>
+  <componentTypes
+      id="LOCK"/>
 </ThingSpecification>
